@@ -1,0 +1,11 @@
+img.card-img-top{
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.mission-box.card{
+    margin-bottom:40px;
+}
+h5.card-title{
+    color: blue;
+    font-weight: 600;
+}

@@ -9,7 +9,7 @@ import { FilterYearsService } from '../filter-years/filter-years.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  launchProgramsData:any
   launchPrograms: any
   launchLandData: any
   launchAllData: any
@@ -23,10 +23,10 @@ export class MainComponent implements OnInit {
         let filterKeys = Object.keys(filters);
 
         filterKeys.forEach(key => {
-          this.launchPrograms = this.launchPrograms.filter(program => {
+          this.launchPrograms = this.launchProgramsData.filter(program => {
             return program[key] === filters[key]
           })
-console.log(this.launchPrograms)
+// console.log(this.launchPrograms)
         })
       }
     );
@@ -36,8 +36,10 @@ console.log(this.launchPrograms)
 
   getLaunchSuccessData() {
     this.fetchService.getLaunchSuccess().subscribe(
-      response => this.launchPrograms = response
-    )
+      response => {
+        this.launchPrograms = response
+        this.launchProgramsData = response
+      })
   }
 
   // applyFilterYear(year){

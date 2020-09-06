@@ -10,12 +10,14 @@ export class FilterYearsService {
   public filters = new Subject<any>();
 
   applyFilterYear(year: number) {
-    this.appliedFilters['launch_year'] = year;
+    //this.appliedFilters['launch_year'] = year;
+    this.appliedFilters = { "launch_year": year }
     this.filters.next(this.appliedFilters);
   }
 
   applyFilterLaunch(isLaunch: boolean) {
-    this.appliedFilters['launch_success'] = isLaunch;
+   // this.appliedFilters['launch_success'] = isLaunch;
+    this.appliedFilters = { "launch_success": isLaunch }
     this.filters.next(this.appliedFilters);
   }
 

@@ -15,7 +15,7 @@ export class FilterYearsComponent implements OnInit {
     setTimeout(() => {
       // this.filterService.applyFilterYear(2008);
       //this.filterService.applyFilterLaunch(true);
-      this.applyFilterLaunch(true);
+      //this.applyFilterLaunch(true);
     },2000);
 
   }

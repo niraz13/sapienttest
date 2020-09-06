@@ -6,9 +6,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FetchServiceService {
-launchSucess = "https://api.spacexdata.com/v3/launches?limit=10&amp;launch_success=true";
-  launchLand = "https://api.spacexdata.com/v3/launches?limit=10&amp;launch_success=true&amp;land_success=true";
-  launchAll = "https://api.spacexdata.com/v3/launches?limit=10&amp;launch_success=true&amp;land_success=true&amp;launch_year="
+launchSucess = "https://api.spacexdata.com/v3/launches?limit=100&amp;launch_success=true";
+  launchLand = "https://api.spacexdata.com/v3/launches?limit=100&amp;launch_success=true&amp;land_success=true";
+  launchAll = "https://api.spacexdata.com/v3/launches?limit=100&amp;launch_success=true&amp;land_success=true&amp;launch_year="
   constructor(private http:HttpClient) { }
 
   getLaunchSuccess(): Observable < any[] > {
